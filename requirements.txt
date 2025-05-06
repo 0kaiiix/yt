@@ -1,5 +1,5 @@
-streamlit
-opencv-python-headless
-yt-dlp
-mediapipe
-protobuf
+streamlit>=1.30.0
+opencv-python-headless>=4.8.0.76
+yt-dlp>=2024.1.1
+mediapipe>=0.10.10
+protobuf<4  # Mediapipe 相容性需求，避免與 protobuf 4.x 衝突
