@@ -5,7 +5,7 @@ import streamlit as st
 import yt_dlp
 import mediapipe as mp
 
-base_options = mp.tasks.BaseOptions('models/efficientdet_lite0.tflite')
+base_options = mp.tasks.BaseOptions(model_asset_path='models/efficientdet_lite0.tflite')
 options = mp.tasks.vision.ObjectDetectorOptions(base_options, score_threshold=0.2)
 detector = mp.tasks.vision.ObjectDetector.create_from_options(options)
 
