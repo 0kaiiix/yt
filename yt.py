@@ -6,7 +6,11 @@ import yt_dlp
 import mediapipe as mp
 
 base_options = mp.tasks.BaseOptions(model_asset_path='models/efficientdet_lite0.tflite')
-options = mp.tasks.vision.ObjectDetectorOptions(base_options, score_threshold=0.2)
+options = mp.tasks.vision.ObjectDetectorOptions(
+    base_options=base_options,
+    score_threshold=0.2
+)
+
 detector = mp.tasks.vision.ObjectDetector.create_from_options(options)
 
 #video_url = "https://www.youtube.com/watch?v=v9rQqa_VTEY"
