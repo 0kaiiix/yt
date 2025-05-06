@@ -1,0 +1,5 @@
+streamlit>=1.20.0
+opencv-python
+yt-dlp
+mediapipe
+protobuf<4.0.0
